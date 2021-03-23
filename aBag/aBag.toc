@@ -1,0 +1,12 @@
+## Interface: 90005
+## Author: cocovanana
+## Title: aBag |cff1a9fc0Retail|r
+## Version: 2.2
+## Notes: One big bag.
+
+config.lua
+utils.lua
+bag.lua
+bank.lua
+reagents.lua
+init.lua
