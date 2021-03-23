@@ -14,7 +14,6 @@ If you want to have the same font as in the screenshots, install the fonts from 
   * Reagent bank! (disableable as well)
   * Money text!
   * Nothing else!
-[/LIST][/COLOR][/INDENT]
 
 ## Anti-features
   * No bag manager - relies on blizzard's.
