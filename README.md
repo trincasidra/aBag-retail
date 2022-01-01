@@ -30,8 +30,11 @@ If you want to have the same font as in the screenshots, install the fonts from 
   * Any update to the equipped bags / bank bags, purchasing a bank slot, or unlocking the reagent bank won't update the addon. It's just... not implemented, so you'll need to /reload.
   * Any bank bags equipped after the first empty bag slot won't show properly. Just make sure all empty bag slots are on the right side.
   * Pressing the "toggle all bags" keybind while having the bank open will close the bank but not the bag. Bag will close after pressing that keybind a second time. Pressing Escape properly closes both at the same time.
+  * Interacting with the Soulbind table while on "tutorial" mode (when you get the quest to learn the first conduits), makes the slots of any non-backpack bag containing conduits displace to their original position. Just learn the conduits, and the bag will work again.
+  * If using Aurora, empty slots show the default background the first time the bag opens.
 
 ## Changelog
+  * 2.3: Added Aurora and TrincaUI support.
   * 2.2: Added bank and reagent bank support.
   * 2.1: Replaced blizzard's border on empty slots with a sleek backdrop.
   * 2.0: Completely revamped the addon for retail.

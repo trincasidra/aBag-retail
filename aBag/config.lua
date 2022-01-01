@@ -1,27 +1,27 @@
 local A, L = ...
 
 L.C = {
-  fontFamily    = STANDARD_TEXT_FONT,
+  fontFamily    = L.LSM:Fetch('font', 'Expressway') or STANDARD_TEXT_FONT,
   fontType      = "ChatFontNormal",
   iconSize      = 42,
   sort          = false, -- Blizz sort is quite shitty
   backdrop = {
     bgFile               = "Interface\\Buttons\\WHITE8x8",
-    bgColor              = {0.08, 0.08, 0.1, 0.92},
+    bgColor              = {.08, .08, .1, .92},
     edgeFile             = "Interface\\Tooltips\\UI-Tooltip-Border",
-    borderColor          = {0.1, 0.1, 0.1, 0.6},
-    itemBorderColorAlpha = 0.9,
+    borderColor          = {.1, .1, .1, .6},
+    itemBorderColorAlpha = .9,
     tile                 = false,
     tileEdge             = false,
     tileSize             = 16,
     edgeSize             = 16,
-    insets               = {left = 3, right = 3, top = 3, bottom = 3}
+    insets               = {left = 3, right = 3, top = 3, bottom = 3},
   },
   bag = {
     padding      = 4,
     columns      = 12,
-    point        = {"BOTTOMRIGHT", -50, 200},
-    --point        = {"BOTTOM", 800, 200}, -- My personal settings for ultrawide
+    point        = {"BOTTOMRIGHT", -50, 220},
+    --point        = {"BOTTOM", 800, 220}, -- My personal settings for 32:9 ultrawide
     extraHeight  = 16,
   },
   bank = {
@@ -29,7 +29,7 @@ L.C = {
     padding      = 4,
     columns      = 24,
     point        = {"BOTTOMLEFT", 50, 250},
-    --point        = {"TOP", -800, -400}, -- My personal settings for ultrawide (needs a big bank or reagents will clip)
+    --point        = {"TOP", -800, -400}, -- My personal settings for 32:9 ultrawide (needs a big bank or reagents will clip)
     showSlots    = true,
   },
   reagents = {

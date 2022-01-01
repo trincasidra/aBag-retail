@@ -45,17 +45,28 @@ function L.bag:SetupBag()
     local posX, posY = L.U.calcPos(k, L.C.bag)
     L.U.exileFrame(v, {"TOPLEFT", L.bag.frame, "TOPLEFT", 1 + L.C.backdrop.insets.left + L.C.bag.padding + L.C.iconSize*posX, -L.C.backdrop.insets.top - L.C.bag.padding - L.C.iconSize*posY})
 
-    -- Create a nice and sleek backdrop for empty bagslots
-    v.backdrop = CreateFrame("Frame", "aBagItemBackdrop"..k, v, BackdropTemplateMixin and "BackdropTemplate")
-    v.backdrop:SetFrameStrata("MEDIUM")
-    v.backdrop:SetFrameLevel(2)
-    v.backdrop:SetWidth(L.C.iconSize)
-    v.backdrop:SetHeight(L.C.iconSize)
-    v.backdrop:SetPoint("TOPLEFT", -L.C.backdrop.insets.left, L.C.backdrop.insets.top)
-    v.backdrop:SetBackdrop(L.C.backdrop)
-    v.backdrop:SetBackdropColor(unpack(L.C.backdrop.bgColor))
-    v.backdrop:SetBackdropBorderColor(unpack(L.C.backdrop.borderColor))
-    v.backdrop:Show()
+    -- Create a nice and sleek backdrop for empty bagslots if Aurora is not installed
+    if not _G.AuroraConfig and not _G.AuroraConfig.bags then
+      v.backdrop = CreateFrame("Frame", "aBagItemBackdrop"..k, v, BackdropTemplateMixin and "BackdropTemplate")
+      v.backdrop:SetFrameStrata("MEDIUM")
+      v.backdrop:SetFrameLevel(2)
+      v.backdrop:SetWidth(L.C.iconSize)
+      v.backdrop:SetHeight(L.C.iconSize)
+      v.backdrop:SetPoint("TOPLEFT", -L.C.backdrop.insets.left, L.C.backdrop.insets.top)
+      v.backdrop:SetBackdrop(L.C.backdrop)
+      v.backdrop:SetBackdropColor(unpack(L.C.backdrop.bgColor))
+      v.backdrop:SetBackdropBorderColor(unpack(L.C.backdrop.borderColor))
+      v.backdrop:Show()
+    else
+      v:HookScript("OnShow", function(self)
+        if self.Center and not self.centerHidden then
+          self.Center:SetTexture("Interface\\Buttons\\WHITE8x8")
+          self.Center:SetVertexColor(unpack(L.C.backdrop.bgColor))
+          self.centerHidden = true
+        end
+      end,
+      2)
+    end
   end
 
   -- Reposition money
