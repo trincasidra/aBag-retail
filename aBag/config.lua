@@ -37,8 +37,16 @@ L.C = {
     padding      = 4,
     columns      = 14,
   },
-  items = { -- 20 slots on backpack and 40 for each bag, should be plenty.
+  items = { -- 28 slots on backpack to reflect the +8 bag slots for vulpera and 40 for each bag, should be plenty.
     {
+      ContainerFrame1Item28,
+      ContainerFrame1Item27,
+      ContainerFrame1Item26,
+      ContainerFrame1Item25,
+      ContainerFrame1Item24,
+      ContainerFrame1Item23,
+      ContainerFrame1Item22,
+      ContainerFrame1Item21,
       ContainerFrame1Item20,
       ContainerFrame1Item19,
       ContainerFrame1Item18,
