@@ -1,7 +1,7 @@
 ## Interface: 90105
 ## Author: Trincasidra
 ## Title: aBag |cff1a9fc0Retail|r
-## Version: 2.3
+## Version: 2.3r
 ## Notes: One big bag.
 
 init.lua

@@ -1,4 +1,6 @@
 local A, L = ...
 
-local SharedMedia = LibStub("LibSharedMedia-3.0")
-L.LSM = SharedMedia
+if LibStub then
+  local SharedMedia = LibStub("LibSharedMedia-3.0")
+  L.LSM = SharedMedia
+end

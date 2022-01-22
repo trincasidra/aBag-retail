@@ -26,5 +26,5 @@ SlashCmdList["abag"] = function(cmd)
 end
 
 _G["SLASH_abag1"] = "/abag"
-print("|cff1a9fc0aBag loaded.|r")
-print("|cff1a9fc0abag|r to display the command list")
+print("|cff1a9fc0aBag|r loaded.")
+--print("Use |cff1a9fc0/abag|r to display the command list.")

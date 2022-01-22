@@ -1,7 +1,7 @@
 local A, L = ...
 
 L.C = {
-  fontFamily    = L.LSM:Fetch('font', 'Expressway') or STANDARD_TEXT_FONT,
+  fontFamily    = L.LSM and L.LSM:Fetch('font', 'Expressway') or STANDARD_TEXT_FONT,
   fontType      = "ChatFontNormal",
   iconSize      = 42,
   sort          = false, -- Blizz sort is quite shitty
