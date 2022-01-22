@@ -29,7 +29,7 @@ function L.bag:SetupBag()
 
   if (L.C.sort) then
     L.bag.frame.sort = CreateFrame("Button", "aBagSort", L.bag.frame)
-    L.bag.frame.sort:SetPoint("BOTTOMLEFT",L. container.frame, L.C.backdrop.insets.right+6, L.C.backdrop.insets.bottom+4)
+    L.bag.frame.sort:SetPoint("BOTTOMLEFT",L.bag.frame, L.C.backdrop.insets.right+6, L.C.backdrop.insets.bottom+4)
     L.bag.frame.sort:SetWidth(14)
     L.bag.frame.sort:SetHeight(14)
     L.bag.frame.sort.dot = L.bag.frame.sort:CreateFontString("aBagSortDot", "BORDER", L.C.fontType)
@@ -46,7 +46,7 @@ function L.bag:SetupBag()
     L.U.exileFrame(v, {"TOPLEFT", L.bag.frame, "TOPLEFT", 1 + L.C.backdrop.insets.left + L.C.bag.padding + L.C.iconSize*posX, -L.C.backdrop.insets.top - L.C.bag.padding - L.C.iconSize*posY})
 
     -- Create a nice and sleek backdrop for empty bagslots if Aurora is not installed
-    if not _G.AuroraConfig and not _G.AuroraConfig.bags then
+    if (not IsAddOnLoaded("Aurora")) or (_G.AuroraConfig and not _G.AuroraConfig.bags) then
       v.backdrop = CreateFrame("Frame", "aBagItemBackdrop"..k, v, BackdropTemplateMixin and "BackdropTemplate")
       v.backdrop:SetFrameStrata("MEDIUM")
       v.backdrop:SetFrameLevel(2)

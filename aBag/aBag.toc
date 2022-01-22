@@ -4,6 +4,9 @@
 ## Version: 2.3r
 ## Notes: One big bag.
 
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\LibSharedMedia-3.0\lib.xml
 init.lua
 config.lua
 utils.lua
