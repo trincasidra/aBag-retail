@@ -5,7 +5,6 @@ WoW Retail bag and bank addon, featuring simplicity and a sleek design.
 Extra simple bag addon for simple people like me!
 All config is done in the config.lua file.
 Please note that this addon has been rehauled for Retail from its Classic version, and now it's literally reusing blizzard's frames to be as lightweight as possible. This also means it's even more simple than before.
-If you want to have the same font as in the screenshots, install the fonts from [ZorkUI](https://www.wowinterface.com/downloads/info24252-ZorkUI.html).
 
 ## Features
   * One big simple bag!
